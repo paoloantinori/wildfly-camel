@@ -5,6 +5,7 @@
 	^com/google/protobuf
 	^com/mongodb(.*)
 	^groovy(.*)
+  	^io/nats(.*)
 	^io/swagger(.*)
 	^io/vertx/core(.*)
 	^net/sf/saxon(.*)
@@ -36,13 +37,13 @@
 	^org/infinispan
 	^org/infinispan/commons(.*)
 	^org/infinispan/manager(.*)
-    ^org/nats(.*)
 	^org/springframework(.*)
     ^org/xbill(.*)
 	^org/xmlsoap(.*)
 	^schema/(.*)
 	^schemas/(.*)
 	^twitter4j/(.*)
+	^w3c/xslt3
 	^META-INF/cxf(.*)
 	^META-INF/services(.*)
 	
