@@ -41,8 +41,10 @@
 
     <!-- Modules -->
     <modules>
+        <!-- [#1248] Restore archetypes on JDK9
         <module>archetype-cdi</module>
         <module>archetype-spring</module>
+        -->
     </modules>
 
     <!-- Dependencies -->
