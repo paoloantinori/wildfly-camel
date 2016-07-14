@@ -47,10 +47,6 @@
             <artifactId>cdi-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.xmlbeans</groupId>
-            <artifactId>xmlbeans</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.apache.directory.server</groupId>
             <artifactId>apacheds-server-jndi</artifactId>
             <version>${version.apache.ds}</version>
@@ -136,22 +132,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>xmlbeans-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>xmlbeans-generate</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>xmlbeans</goal>
-                        </goals>
-                        <configuration>
-                            <schemaDirectory>src/main/resources/xmlbeans/xsd</schemaDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
