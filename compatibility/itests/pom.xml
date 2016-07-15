@@ -57,7 +57,8 @@
                 </property>
             </activation>
             <modules>
-                <module>karaf</module>
+                <!-- [#1253] Restore support for portable deployments
+                <module>karaf</module -->
             </modules>
         </profile>
         <profile>
