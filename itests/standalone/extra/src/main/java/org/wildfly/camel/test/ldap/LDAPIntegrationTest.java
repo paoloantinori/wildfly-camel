@@ -58,6 +58,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.jboss.shrinkwrap.resolver.api.maven.Maven;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.wildfly.camel.test.ldap.DirectoryServiceBuilder.SetupResult;
@@ -66,6 +67,7 @@ import org.wildfly.extension.camel.CamelAware;
 @CamelAware
 @RunWith(Arquillian.class)
 @ServerSetup({ LDAPIntegrationTest.LDAPServerSetupTask.class })
+@Ignore("[#1264] Failed instantiate InitialContextFactory com.sun.jndi.ldap.LdapCtxFactory")
 public class LDAPIntegrationTest {
 
     @CreateLdapServer(transports = { @CreateTransport(protocol = "LDAP") })
