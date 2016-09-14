@@ -29,27 +29,34 @@ import org.apache.camel.ProducerTemplate;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
 import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.container.test.api.RunAsClient;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.as.arquillian.container.ManagementClient;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
+import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.wildfly.camel.test.http4.subA.MyServlet;
+import org.wildfly.extension.camel.CamelAware;
 import org.wildfly.extension.camel.EndpointRegistryClient;
 
-@RunAsClient
+@CamelAware
 @RunWith(Arquillian.class)
 public class UndertowProducerIntegrationTest {
 
     @ArquillianResource
     ManagementClient managementClient;
-
+    
     @Deployment
-    public static WebArchive createDeployment() {
+    public static JavaArchive createDeployment() {
+        final JavaArchive archive = ShrinkWrap.create(JavaArchive.class, "undertow-producer-tests");
+        return archive;
+    }
+
+    @Deployment(name = "webapp", testable = false)
+    public static WebArchive webappDeployment() {
         final WebArchive archive = ShrinkWrap.create(WebArchive.class, "undertow-producer.war");
         archive.addClasses(MyServlet.class);
         return archive;

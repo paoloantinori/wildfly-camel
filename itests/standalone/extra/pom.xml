@@ -183,6 +183,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
+                    <argLine>--add-modules java.se.ee</argLine>
                     <systemPropertyVariables>
                         <org.jboss.remoting-jmx.timeout>300</org.jboss.remoting-jmx.timeout>
                     </systemPropertyVariables>

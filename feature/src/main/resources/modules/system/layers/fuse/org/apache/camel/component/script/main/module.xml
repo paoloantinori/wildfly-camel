@@ -12,7 +12,6 @@
     <module name="org.beanshell" services="export" />
     <module name="org.osgi.core" />
     <module name="org.slf4j" />
-    <module name="javax.xml.bind.api" />
     <module name="org.apache.camel.core" />
   </dependencies>
 </module>

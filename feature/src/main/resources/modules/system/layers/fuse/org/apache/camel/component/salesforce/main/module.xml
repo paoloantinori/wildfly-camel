@@ -14,7 +14,6 @@
     <module name="com.fasterxml.jackson.core.jackson-core" />
     <module name="com.fasterxml.jackson.core.jackson-databind" />
     <module name="com.thoughtworks.xstream" />
-    <module name="javax.xml.bind.api" />
     <module name="org.apache.camel.core" />
     <module name="org.eclipse.jetty" />
     <module name="org.slf4j" />

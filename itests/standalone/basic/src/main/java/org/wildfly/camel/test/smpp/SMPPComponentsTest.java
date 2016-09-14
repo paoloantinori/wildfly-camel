@@ -23,14 +23,25 @@ package org.wildfly.camel.test.smpp;
 import org.apache.camel.CamelContext;
 import org.apache.camel.Endpoint;
 import org.apache.camel.impl.DefaultCamelContext;
+import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.shrinkwrap.api.ShrinkWrap;
+import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.wildfly.extension.camel.CamelAware;
 
+@CamelAware
 @RunWith(Arquillian.class)
 public class SMPPComponentsTest {
 
+    @Deployment
+    public static JavaArchive deployment() {
+        final JavaArchive archive = ShrinkWrap.create(JavaArchive.class, "smpp-endpoint-tests");
+        return archive;
+    }
+    
     @Test
     public void testSMPPComponentLoads() throws Exception {
         CamelContext camelctx = new DefaultCamelContext();
