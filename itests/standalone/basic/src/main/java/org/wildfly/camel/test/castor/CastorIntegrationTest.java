@@ -29,6 +29,7 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.wildfly.camel.test.common.types.Customer;
@@ -36,6 +37,7 @@ import org.wildfly.extension.camel.CamelAware;
 
 @CamelAware
 @RunWith(Arquillian.class)
+@Ignore("[#1262] Castor attempts to access private class from module java.xml")
 public class CastorIntegrationTest {
 
     private static final String CUSTOMER_XML = "<customer><last-name>Doe</last-name><first-name>John</first-name></customer>";
