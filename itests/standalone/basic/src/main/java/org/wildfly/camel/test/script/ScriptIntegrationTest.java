@@ -36,6 +36,7 @@ import org.jboss.gravia.utils.IOUtils;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.wildfly.extension.camel.CamelAware;
@@ -72,6 +73,7 @@ public class ScriptIntegrationTest {
     }
 
     @Test
+    @Ignore("[#1263] InaccessibleObjectException in RubyToJavaInvoker")
     public void testRuby() throws Exception {
         scriptProcessing("ruby", RUBY_SCRIPT);
     }
