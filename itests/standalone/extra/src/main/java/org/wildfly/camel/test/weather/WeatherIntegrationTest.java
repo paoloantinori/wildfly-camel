@@ -32,6 +32,7 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.jboss.shrinkwrap.resolver.api.maven.Maven;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -42,6 +43,7 @@ import software.betamax.junit.RecorderRule;
 
 @CamelAware
 @RunWith(Arquillian.class)
+@Ignore("[#1343] Netty cannot access proprietary API")
 public class WeatherIntegrationTest {
 
     @Rule

@@ -34,11 +34,13 @@ import org.jboss.gravia.runtime.ServiceLocator;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.wildfly.extension.camel.CamelContextRegistry;
 
 @RunWith(Arquillian.class)
+@Ignore("[#1343] Netty cannot access proprietary API")
 public class NettyIntegrationTest {
 
     private static final String SOCKET_HOST = "localhost";

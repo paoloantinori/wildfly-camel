@@ -36,10 +36,12 @@ import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(Arquillian.class)
+@Ignore("[#1343] Netty cannot access proprietary API")
 public class SecureNettyIntegrationTest {
 
     private static final String KEYSTORE = "keystore.jks";
