@@ -49,6 +49,7 @@
 	^org/springframework(.*)
 	^org/xbill(.*)
 	^org/xmlsoap(.*)
+	^org/yaml(.*)
 	^schema/(.*)
 	^schemas/(.*)
 	^twitter4j/(.*)
