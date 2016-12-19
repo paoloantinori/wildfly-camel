@@ -12,14 +12,14 @@
     "javaType": "org.apache.camel.component.xmlsecurity.XmlSignatureComponent",
     "groupId": "org.apache.camel",
     "artifactId": "camel-xmlsecurity",
-    "version": "2.18.2"
+    "version": "2.19.0-SNAPSHOT"
   },
   "componentProperties": {
-    "signerConfiguration": { "kind": "property", "type": "object", "javaType": "org.apache.camel.component.xmlsecurity.processor.XmlSignerConfiguration", "deprecated": "false", "secret": "false", "description": "To use a shared XmlSignerConfiguration configuration to use as base for configuring endpoints." },
-    "verifierConfiguration": { "kind": "property", "type": "object", "javaType": "org.apache.camel.component.xmlsecurity.processor.XmlVerifierConfiguration", "deprecated": "false", "secret": "false", "description": "To use a shared XmlVerifierConfiguration configuration to use as base for configuring endpoints." }
+    "signerConfiguration": { "kind": "property", "group": "advanced", "label": "advanced", "required": "false", "type": "object", "javaType": "org.apache.camel.component.xmlsecurity.processor.XmlSignerConfiguration", "deprecated": "false", "secret": "false", "description": "To use a shared XmlSignerConfiguration configuration to use as base for configuring endpoints." },
+    "verifierConfiguration": { "kind": "property", "group": "advanced", "label": "advanced", "required": "false", "type": "object", "javaType": "org.apache.camel.component.xmlsecurity.processor.XmlVerifierConfiguration", "deprecated": "false", "secret": "false", "description": "To use a shared XmlVerifierConfiguration configuration to use as base for configuring endpoints." }
   },
   "properties": {
-    "command": { "kind": "path", "group": "producer", "required": "true", "type": "string", "javaType": "org.apache.camel.component.xmlsecurity.XmlCommand", "enum": [ "sign", "verify" ], "deprecated": "false", "secret": "false", "description": "Whether to sign or verify." },
+    "command": { "kind": "path", "group": "producer", "required": "true", "type": "object", "javaType": "org.apache.camel.component.xmlsecurity.XmlCommand", "enum": [ "sign", "verify" ], "deprecated": "false", "secret": "false", "description": "Whether to sign or verify." },
     "name": { "kind": "path", "group": "producer", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "secret": "false", "description": "The name part in the URI can be chosen by the user to distinguish between different signer/verifier endpoints within the camel context." },
     "baseUri": { "kind": "parameter", "group": "common", "label": "common", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "secret": "false", "description": "You can set a base URI which is used in the URI dereferencing. Relative URIs are then concatenated with the base URI." },
     "clearHeaders": { "kind": "parameter", "group": "common", "label": "common", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "secret": "false", "defaultValue": "true", "description": "Determines if the XML signature specific headers be cleared after signing and verification. Defaults to true." },

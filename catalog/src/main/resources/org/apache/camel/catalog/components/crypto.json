@@ -12,13 +12,13 @@
     "javaType": "org.apache.camel.component.crypto.DigitalSignatureComponent",
     "groupId": "org.apache.camel",
     "artifactId": "camel-crypto",
-    "version": "2.18.2"
+    "version": "2.19.0-SNAPSHOT"
   },
   "componentProperties": {
-    "configuration": { "kind": "property", "type": "object", "javaType": "org.apache.camel.component.crypto.DigitalSignatureConfiguration", "deprecated": "false", "secret": "false", "description": "To use the shared DigitalSignatureConfiguration as configuration" }
+    "configuration": { "kind": "property", "group": "advanced", "label": "advanced", "required": "false", "type": "object", "javaType": "org.apache.camel.component.crypto.DigitalSignatureConfiguration", "deprecated": "false", "secret": "false", "description": "To use the shared DigitalSignatureConfiguration as configuration" }
   },
   "properties": {
-    "cryptoOperation": { "kind": "path", "group": "producer", "required": "true", "type": "string", "javaType": "org.apache.camel.component.crypto.CryptoOperation", "enum": [ "sign", "verify" ], "deprecated": "false", "secret": "false", "description": "Set the Crypto operation from that supplied after the crypto scheme in the endpoint uri e.g. crypto:sign sets sign as the operation." },
+    "cryptoOperation": { "kind": "path", "group": "producer", "required": "true", "type": "object", "javaType": "org.apache.camel.component.crypto.CryptoOperation", "enum": [ "sign", "verify" ], "deprecated": "false", "secret": "false", "description": "Set the Crypto operation from that supplied after the crypto scheme in the endpoint uri e.g. crypto:sign sets sign as the operation." },
     "name": { "kind": "path", "group": "producer", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "secret": "false", "description": "The logical name of this operation." },
     "algorithm": { "kind": "parameter", "group": "producer", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "secret": "false", "defaultValue": "SHA1WithDSA", "description": "Sets the JCE name of the Algorithm that should be used for the signer." },
     "alias": { "kind": "parameter", "group": "producer", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "secret": "false", "description": "Sets the alias used to query the KeyStore for keys and link java.security.cert.Certificate Certificates to be used in signing and verifying exchanges. This value can be provided at runtime via the message header link org.apache.camel.component.crypto.DigitalSignatureConstantsKEYSTORE_ALIAS" },

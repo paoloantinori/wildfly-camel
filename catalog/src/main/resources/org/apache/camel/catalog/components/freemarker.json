@@ -12,10 +12,10 @@
     "javaType": "org.apache.camel.component.freemarker.FreemarkerComponent",
     "groupId": "org.apache.camel",
     "artifactId": "camel-freemarker",
-    "version": "2.18.2"
+    "version": "2.19.0-SNAPSHOT"
   },
   "componentProperties": {
-    "configuration": { "kind": "property", "type": "object", "javaType": "freemarker.template.Configuration", "deprecated": "false", "secret": "false", "description": "To use an existing freemarker.template.Configuration instance as the configuration." }
+    "configuration": { "kind": "property", "group": "advanced", "label": "advanced", "required": "false", "type": "object", "javaType": "freemarker.template.Configuration", "deprecated": "false", "secret": "false", "description": "To use an existing freemarker.template.Configuration instance as the configuration." }
   },
   "properties": {
     "resourceUri": { "kind": "path", "group": "producer", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "secret": "false", "description": "Path to the resource or a reference to lookup a bean in the Registry to use as the resource" },

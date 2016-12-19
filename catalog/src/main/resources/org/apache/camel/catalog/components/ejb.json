@@ -12,11 +12,11 @@
     "javaType": "org.apache.camel.component.ejb.EjbComponent",
     "groupId": "org.apache.camel",
     "artifactId": "camel-ejb",
-    "version": "2.18.2"
+    "version": "2.19.0-SNAPSHOT"
   },
   "componentProperties": {
-    "context": { "kind": "property", "type": "object", "javaType": "javax.naming.Context", "deprecated": "false", "secret": "false", "description": "The Context to use for looking up the EJBs" },
-    "properties": { "kind": "property", "type": "object", "javaType": "java.util.Properties", "deprecated": "false", "secret": "false", "description": "Properties for creating javax.naming.Context if a context has not been configured." }
+    "context": { "kind": "property", "group": "producer", "type": "object", "javaType": "javax.naming.Context", "deprecated": "false", "secret": "false", "description": "The Context to use for looking up the EJBs" },
+    "properties": { "kind": "property", "group": "producer", "type": "object", "javaType": "java.util.Properties", "deprecated": "false", "secret": "false", "description": "Properties for creating javax.naming.Context if a context has not been configured." }
   },
   "properties": {
     "beanName": { "kind": "path", "group": "producer", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "secret": "false", "description": "Sets the name of the bean to invoke" },

@@ -4,13 +4,13 @@
     "kind": "language",
     "modelName": "ref",
     "title": "Ref",
-    "description": "For using a custom expression",
+    "description": "For using a custom expression or predicate",
     "label": "language,core",
     "javaType": "org.apache.camel.language.ref.RefLanguage",
     "modelJavaType": "org.apache.camel.model.language.RefExpression",
     "groupId": "org.apache.camel",
     "artifactId": "camel-core",
-    "version": "2.18.2"
+    "version": "2.19.0-SNAPSHOT"
   },
   "properties": {
     "expression": { "kind": "value", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "secret": "false", "description": "The expression value in your chosen language syntax" },

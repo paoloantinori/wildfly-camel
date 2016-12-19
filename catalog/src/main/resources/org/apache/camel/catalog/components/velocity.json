@@ -12,10 +12,10 @@
     "javaType": "org.apache.camel.component.velocity.VelocityComponent",
     "groupId": "org.apache.camel",
     "artifactId": "camel-velocity",
-    "version": "2.18.2"
+    "version": "2.19.0-SNAPSHOT"
   },
   "componentProperties": {
-    "velocityEngine": { "kind": "property", "type": "object", "javaType": "org.apache.velocity.app.VelocityEngine", "deprecated": "false", "secret": "false", "description": "To use the VelocityEngine otherwise a new engine is created" }
+    "velocityEngine": { "kind": "property", "group": "advanced", "label": "advanced", "required": "false", "type": "object", "javaType": "org.apache.velocity.app.VelocityEngine", "deprecated": "false", "secret": "false", "description": "To use the VelocityEngine otherwise a new engine is created" }
   },
   "properties": {
     "resourceUri": { "kind": "path", "group": "producer", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "secret": "false", "description": "Path to the resource or a reference to lookup a bean in the Registry to use as the resource" },

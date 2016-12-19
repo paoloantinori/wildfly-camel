@@ -12,10 +12,10 @@
     "javaType": "org.apache.camel.component.validator.ValidatorComponent",
     "groupId": "org.apache.camel",
     "artifactId": "camel-core",
-    "version": "2.18.2"
+    "version": "2.19.0-SNAPSHOT"
   },
   "componentProperties": {
-    "resourceResolverFactory": { "kind": "property", "label": "advanced", "required": "false", "type": "object", "javaType": "org.apache.camel.component.validator.ValidatorResourceResolverFactory", "deprecated": "false", "secret": "false", "description": "To use a custom LSResourceResolver which depends on a dynamic endpoint resource URI" }
+    "resourceResolverFactory": { "kind": "property", "group": "advanced", "label": "advanced", "required": "false", "type": "object", "javaType": "org.apache.camel.component.validator.ValidatorResourceResolverFactory", "deprecated": "false", "secret": "false", "description": "To use a custom LSResourceResolver which depends on a dynamic endpoint resource URI" }
   },
   "properties": {
     "resourceUri": { "kind": "path", "group": "producer", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "secret": "false", "description": "URL to a local resource on the classpathor a reference to lookup a bean in the Registry or a full URL to a remote resource or resource on the file system which contains the XSD to validate against." },
