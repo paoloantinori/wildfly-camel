@@ -46,6 +46,7 @@
 	^org/fusesource/hawtbuf(.*)
 	^org/quartz(.*)
 	^org/infinispan(.*)
+	^org/optaplanner(.*)
 	^org/springframework(.*)
 	^org/xbill(.*)
 	^org/xmlsoap(.*)
