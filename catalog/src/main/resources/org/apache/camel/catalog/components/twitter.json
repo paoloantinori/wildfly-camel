@@ -11,7 +11,7 @@
     "javaType": "org.apache.camel.component.twitter.TwitterComponent",
     "groupId": "org.apache.camel",
     "artifactId": "camel-twitter",
-    "version": "2.18.2"
+    "version": "2.18.3-SNAPSHOT"
   },
   "componentProperties": {
     "accessToken": { "kind": "property", "label": "security", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "secret": "true", "description": "The access token" },
